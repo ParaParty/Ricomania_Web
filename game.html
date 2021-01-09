@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/game.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="app">
+    <div @touchstart="touch" class="game">
+      <p class="score">{{hit}}</p>
+      <img class="bg" src="img/bg.jpg" alt="">
+      <div class="decide-line">
+      </div>
+      <div class="content">
+        <div v-for="note in status" :key="note[0]" :data-id="note[0]" :ref="'note' + note[0]" class="note">
+          <!-- {{note[0]}} -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

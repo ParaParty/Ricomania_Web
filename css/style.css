@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #333;
+}
+.game {
+  width: 960px;
+  height: 540px;
+  position: absolute;
+  top: 110px;
+  overflow: hidden;
+}
+.bg, .content {
+  position: absolute;
+}
+.bg {
+  background-image:
+  linear-gradient(rgb(255 255 255 / 0.3) 0.5px,transparent 0),
+  linear-gradient(90deg, rgb(255 255 255 / 0.3) 0.5px,transparent 0),
+  linear-gradient(rgb(255 255 255 / 0.1) 1px,transparent 0),
+  linear-gradient(90deg,rgb(255 255 255 / 0.1) 1px,transparent 0);
+  background-size: 80px 80px,80px 80px,16px 16px,16px 16px;
+  width: 960px;
+  height: 540px;
+  box-shadow: 0px 0px 0px 0.5px #fff inset;
+  z-index: 1;
+  pointer-events: none;
+}
+.note {
+  position: absolute;
+  background: #cccccc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-sizing: border-box;
+}
+.player {
+  width: 1280px;
+  position: absolute;
+  top: 0;
+}
