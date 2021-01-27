@@ -12,6 +12,7 @@
       <p class="score">{{hit}}</p>
       <img class="bg" src="img/bg.jpg" alt="">
       <div class="decide-line">
+        <div :style="{left: touchX - 40 + 'px'}" :class="[inTouch ? 'decide-touch-active' : '', 'decide-touch']"></div>
       </div>
       <div class="content">
         <div v-for="note in status" :key="note[0]" :data-id="note[0]" :ref="'note' + note[0]" class="note">

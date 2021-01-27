@@ -24,6 +24,8 @@ const app = new Vue({
     status: [],
     timeLine: null,
     hit: 0,
+    inTouch: 0,
+    touchX: 0,
   },
   methods: {
     setFinishTime(id, time) {
@@ -62,6 +64,12 @@ const app = new Vue({
           this.status[target][1] = -1
           this.hit++
         }
+        //触控动画
+        this.touchX = x
+        this.inTouch = 1
+        setTimeout(() => {
+          this.inTouch = 0
+        }, 100)
       }
     }
   },

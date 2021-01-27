@@ -52,6 +52,18 @@ html, body {
   box-shadow: 0 0 5px rgb(255 255 255);
   z-index: 1;
 }
+.decide-touch {
+  width: 4em;
+  height: 0;
+  background: linear-gradient(#ffffff00 10%, #c72149 100%);
+  position: absolute;
+  bottom: 103%;
+  left: 65px;
+  transition: height 0.1s;
+}
+.decide-touch-active {
+  height: 4em;
+}
 .score {
   position: absolute;
   color: #fff;
